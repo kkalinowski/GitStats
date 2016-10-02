@@ -3,6 +3,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Windows;
 using GitStats.Properties;
+using Forms = System.Windows.Forms;
 
 namespace GitStats
 {
@@ -80,6 +81,14 @@ namespace GitStats
         {
             DataContext = null;
             DataContext = this;
+        }
+
+        private void BOpenFolderPicker_OnClick(object sender, RoutedEventArgs e)
+        {
+            var folderDialog = new Forms.FolderBrowserDialog();
+            var result = folderDialog.ShowDialog();
+            if (result == Forms.DialogResult.OK)
+                cbRepoPath.Text = folderDialog.SelectedPath;
         }
     }
 }

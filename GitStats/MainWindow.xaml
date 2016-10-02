@@ -19,11 +19,13 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="0">
             <TextBlock Text="Path to repository" Margin="3" VerticalAlignment="Center"/>
-            <ComboBox Margin="3" Width="240" Height="23"
-                  IsEditable="True"
-                  ItemsSource="{Binding SavedPaths}"
-                  Text="{Binding PathToRepo, UpdateSourceTrigger=PropertyChanged}"/>
+            <ComboBox Name="cbRepoPath" Margin="3" 
+                      Width="240" Height="23" IsEditable="True"
+                      ItemsSource="{Binding SavedPaths}"
+                      Text="{Binding PathToRepo, UpdateSourceTrigger=PropertyChanged}"/>
 
+            <Button Name="bOpenFolderPicker" FontWeight="Bold" Content="..." Width="35" Height="23"
+                    Margin="0,0,3,0" Click="BOpenFolderPicker_OnClick"/>
             <Button Name="bLoadRepo" Content="Load" Width="120" Height="23" Click="bLoadRepo_Click"/>
         </StackPanel>
         
