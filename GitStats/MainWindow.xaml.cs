@@ -88,7 +88,7 @@ namespace GitStats
             var folderDialog = new Forms.FolderBrowserDialog();
             var result = folderDialog.ShowDialog();
             if (result == Forms.DialogResult.OK)
-                cbRepoPath.Text = folderDialog.SelectedPath;
+                PathToRepo = folderDialog.SelectedPath;
         }
     }
 }
