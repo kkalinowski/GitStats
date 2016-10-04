@@ -60,7 +60,8 @@
   </Target>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="GitParsing.fs" />
+    <Compile Include="Types.fs" />
+    <Compile Include="Logic.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

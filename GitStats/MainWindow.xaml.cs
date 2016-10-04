@@ -42,7 +42,7 @@ namespace GitStats
         }
         #endregion
 
-        public GitParsing.RepoStats Stats { get; set; }
+        public Types.RepoStats Stats { get; set; }
 
         public MainWindow()
         {
@@ -56,7 +56,7 @@ namespace GitStats
         {
             try
             {
-                Stats = GitParsing.getRepoStats(PathToRepo);
+                Stats = Logic.getRepoStats(PathToRepo);
                 HandleSavedPaths();
             }
             catch (Exception ex)
